@@ -19,9 +19,9 @@
 
    For example you have a project vendor the 3.5.0 version of
    [nlohmann_json](https://github.com/nlohmann/json) library
-   into the `\<repo\>/externals/nlohmann_json`.
+   into the `<repo>/externals/nlohmann_json`.
 
-   To use this library you add `\<repo\>/externals/nlohmann_json/include`
+   To use this library you add `<repo>/externals/nlohmann_json/include`
    to include search directories.
 
    Then you use this library as this:
@@ -31,16 +31,16 @@
    ```
 
    Everything goes well for now, your C++ preprocessor found this file in
-   `\<repo\>/externals/nlohmann_json/include/nlohmann/json.hpp`.
+   `<repo>/externals/nlohmann_json/include/nlohmann/json.hpp`.
 
    But if one day you install a newer version of nlohmann_json into your system
    using package manager,
    and newer header files is installed to `/usr/include`.
-   Although the `\<repo\>/externals/nlohmann_json/include` directory
+   Although the `<repo>/externals/nlohmann_json/include` directory
    has higher priority when preprocessor looking for headers,
    when you writing new code, the IDE or the text editor will
    list the header files found in `/usr/include/nlohmann` together with
-   those found in `\<repo\>/externals/nlohmann_json/include/nlohmann`.
+   those found in `<repo>/externals/nlohmann_json/include/nlohmann`.
 
    The newer nlohmann_json adds a header file `json_fwd.hpp`,
    if you accidentally include this file into your cpp code,
