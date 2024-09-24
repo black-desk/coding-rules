@@ -1,31 +1,42 @@
 # Coding rules
 
 ![](https://img.shields.io/github/check-runs/black-desk/coding-rules/master)
+![](https://img.shields.io/github/commit-activity/w/black-desk/coding-rules/master)
+![](https://img.shields.io/github/contributors/black-desk/coding-rules)
+![](https://img.shields.io/github/license/black-desk/coding-rules)
 
 This is a documentation repository recording the coding rules that I
 studied and thinking that I should follow in my personal projects.
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in RFC 2119.
+---------------------------------------------------------------------
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+document are to be interpreted as described in RFC 2119.
 
 ## Table of Contents
 
+- [Documentation](#documentation)
+- [Versioning](#versioning)
 - [Cpp](#cpp)
-  - [References](#references)
-  - [Tips](#tips)
 - [Golang](#golang)
+
+## Documentation
+
+- [Key words for use in RFCs to Indicate Requirement
+  Levels](https://datatracker.ietf.org/doc/html/rfc2119)
+- [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide)
+
+## Versioning
+
+- [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html)
 
 ## Cpp
 
-### References
-
-1.  [C++ Core
-    Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-2.  [The Pitchfork
-    Layout](https://blog.black-desk.cn/pages/pintchfork-layout.html)
-
-### Tips
+- [C++ Core
+  Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
+- [The Pitchfork
+  Layout](https://blog.black-desk.cn/pages/pintchfork-layout.html)
 
 1.  **DO NOT** directly install header files of your C/C++ project to
     the default include directory
@@ -69,5 +80,5 @@ interpreted as described in RFC 2119.
 
 ## Golang
 
-1.  [Standard Go Project
-    Layout](https://github.com/golang-standards/project-layout)
+- [Standard Go Project
+  Layout](https://github.com/golang-standards/project-layout)

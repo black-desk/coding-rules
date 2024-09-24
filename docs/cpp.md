@@ -1,11 +1,7 @@
 # Cpp
 
-## References
-
-1. [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-2. [The Pitchfork Layout](https://blog.black-desk.cn/pages/pintchfork-layout.html)
-
-## Tips
+- [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
+- [The Pitchfork Layout](https://blog.black-desk.cn/pages/pintchfork-layout.html)
 
 1. **DO NOT** directly install header files of your C/C++ project to
    the default include directory
