@@ -19,6 +19,8 @@ document are to be interpreted as described in RFC 2119.
 - [Documentation](#documentation)
 - [Versioning](#versioning)
 - [Cpp](#cpp)
+  - [Where to install my c/c++ header
+    files](#where-to-install-my-cc-header-files)
 - [Golang](#golang)
 
 ## Documentation
@@ -38,45 +40,46 @@ document are to be interpreted as described in RFC 2119.
 - [The Pitchfork
   Layout](https://blog.black-desk.cn/pages/pintchfork-layout.html)
 
-1.  **DO NOT** directly install header files of your C/C++ project to
-    the default include directory
+### Where to install my c/c++ header files
 
-    Directly install header files in the default include file search
-    directories in Unix-like operating system, for examples,
-    /usr/local/include or /usr/include means that projects building on
-    this operating system may mistakenly include your header files,
-    especially for header only library.
+**DO NOT** directly install header files of your C/C++ project to the
+default include directory.
 
-    For example you have a project vendor the 3.5.0 version of
-    [nlohmann_json](https://github.com/nlohmann/json) library into the
-    `<repo>/externals/nlohmann_json`.
+Directly install header files in the default include file search
+directories in Unix-like operating system, for examples,
+/usr/local/include or /usr/include means that projects building on this
+operating system may mistakenly include your header files, especially
+for header only library.
 
-    To use this library you add `<repo>/externals/nlohmann_json/include`
-    to include search directories.
+For example you have a project vendor the 3.5.0 version of
+[nlohmann_json](https://github.com/nlohmann/json) library into the
+`<repo>/externals/nlohmann_json`.
 
-    Then you use this library as this:
+To use this library you add `<repo>/externals/nlohmann_json/include` to
+include search directories.
 
-    ``` cpp
-    #include "nlohmann/json.hpp"
-    ```
+Then you use this library as this:
 
-    Everything goes well for now, your C++ preprocessor found this file
-    in `<repo>/externals/nlohmann_json/include/nlohmann/json.hpp`.
+``` cpp
+#include "nlohmann/json.hpp"
+```
 
-    But if one day you install a newer version of nlohmann_json into
-    your system using package manager, and newer header files is
-    installed to `/usr/include`. Although the
-    `<repo>/externals/nlohmann_json/include` directory has higher
-    priority when preprocessor looking for headers, when you writing new
-    code, the IDE or the text editor will list the header files found in
-    `/usr/include/nlohmann` together with those found in
-    `<repo>/externals/nlohmann_json/include/nlohmann`.
+Everything goes well for now, your C++ preprocessor found this file in
+`<repo>/externals/nlohmann_json/include/nlohmann/json.hpp`.
 
-    The newer nlohmann_json adds a header file `json_fwd.hpp`, if you
-    accidentally include this file into your cpp code, the error message
-    will says something like the definition of `nlohmann::json` is
-    ambiguous. It is hard to solve this kind of problems in a large
-    porject without related experience.
+But if one day you install a newer version of nlohmann_json into your
+system using package manager, and newer header files is installed to
+`/usr/include`. Although the `<repo>/externals/nlohmann_json/include`
+directory has higher priority when preprocessor looking for headers,
+when you writing new code, the IDE or the text editor will list the
+header files found in `/usr/include/nlohmann` together with those found
+in `<repo>/externals/nlohmann_json/include/nlohmann`.
+
+The newer nlohmann_json adds a header file `json_fwd.hpp`, if you
+accidentally include this file into your cpp code, the error message
+will says something like the definition of `nlohmann::json` is
+ambiguous. It is hard to solve this kind of problems in a large porject
+without related experience.
 
 ## Golang
 
