@@ -24,6 +24,7 @@ document are to be interpreted as described in RFC 2119.
 - [Cpp](#cpp)
   - [Where to install my c/c++ header
     files](#where-to-install-my-cc-header-files)
+  - [Note of the pitchfork layout](#note-of-the-pitchfork-layout)
 - [Golang](#golang)
 
 ## Snippets
@@ -129,6 +130,24 @@ accidentally include this file into your cpp code, the error message
 will says something like the definition of `nlohmann::json` is
 ambiguous. It is hard to solve this kind of problems in a large porject
 without related experience.
+
+### Note of the pitchfork layout
+
+To follow the pitchfork layout, you should place your source files in
+`src` and `include` directory.
+
+So when you writing CMakeLists.txt, you can use these snippets to
+quickly list all your source files:
+
+``` snippets
+snippet find_cpp_source "" b
+`find -regex '\./src/.+\.\(c\|cc\|cpp\|cxx\|h\|hh\|hpp\|hxx\)\(\.in\)?' -type f -printf '%P\n' | sort`
+endsnippet
+
+snippet find_cpp_header "" b
+`find -regex '\./include/.+\.\(h\|hh\|hpp\|hxx\)\(\.in\)?' -type f -printf '%P\n' | sort`
+endsnippet
+```
 
 ## Golang
 
