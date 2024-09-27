@@ -46,3 +46,15 @@ the error message will says something like
 the definition of `nlohmann::json` is ambiguous.
 It is hard to solve this kind of problems in a large porject
 without related experience.
+
+## Note of the pitchfork layout
+
+To follow the pitchfork layout, you should place your source files
+in `src` and `include` directory.
+
+So when you writing CMakeLists.txt,
+you can use these snippets to quickly list all your source files:
+
+```snippets {include=../UltiSnips/command/find-cpp-source.snippets}
+See ../UltiSnips/command/find-cpp-source.snippets
+```
