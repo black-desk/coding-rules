@@ -147,6 +147,10 @@ endsnippet
 snippet find_cpp_header "" b
 `find -regex '\./include/.+\.\(h\|hh\|hpp\|hxx\)\(\.in\)?' -type f -printf '%P\n' | sort`
 endsnippet
+
+snippet find_cpp_source_and_header "" b
+`find -regex '\./\(src\|include\)/.+\.\(h\|hh\|hpp\|hxx\)\(\.in\)?' -type f -printf '%P\n' | sort`
+endsnippet
 ```
 
 ## Golang
