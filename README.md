@@ -16,18 +16,67 @@ document are to be interpreted as described in RFC 2119.
 
 ## Table of Contents
 
+- [Snippets](#snippets)
 - [Documentation](#documentation)
+  - [Write the RFC 2119 note near the beginning of
+    document](#write-the-rfc-2119-note-near-the-beginning-of-document)
 - [Versioning](#versioning)
 - [Cpp](#cpp)
   - [Where to install my c/c++ header
     files](#where-to-install-my-cc-header-files)
 - [Golang](#golang)
 
+## Snippets
+
+This repository provides some code snippets you can found them in the
+[UltiSnips](docs/../UltiSnips) and [VSCode](docs/../VSCode) directory.
+
 ## Documentation
 
 - [Key words for use in RFCs to Indicate Requirement
   Levels](https://datatracker.ietf.org/doc/html/rfc2119)
 - [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide)
+
+### Write the RFC 2119 note near the beginning of document
+
+RFC 2119 requires that:
+
+> Authors who follow these guidelines should incorporate this phrase
+> near the beginning of their document:
+>
+> The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
+> “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this
+> document are to be interpreted as described in RFC 2119.
+
+Snippets:
+
+``` snippets
+snippet RFC_2119 "" b
+The key words **MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**,
+**SHOULD**, **SHOULD NOT**, **RECOMMENDED**, **MAY**, and **OPTIONAL** in this
+document are to be interpreted as described in
+[RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
+endsnippet
+
+snippet RFC_2119-zh_CN "" b
+本文中的关键词**必须**、**禁止**、**必要的**、**应当**、**不应**、**推荐的**、**允许**以及**可选的**的解释见于[RFC 2119][rfc-2119]。
+
+这些关键词与原文中的英语词汇的对应关系如下表所示：
+
+| 中文       | 英语        |
+|------------|-------------|
+| **必须**   | MUST        |
+| **禁止**   | MUST NOT    |
+| **必要的** | REQUIRED    |
+| **应当**   | SHALL       |
+| **不应**   | SHALL NOT   |
+| **推荐的** | RECOMMENDED |
+| **允许**   | MAY         |
+| **可选的** | OPTIONAL    |
+
+[rfc-2119]: https://datatracker.ietf.org/doc/html/rfc2119
+endsnippet
+```
 
 ## Versioning
 

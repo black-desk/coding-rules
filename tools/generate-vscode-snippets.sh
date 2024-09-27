@@ -18,7 +18,7 @@ CURRENT_SOURCE_FILE_NAME="$(basename -- "$CURRENT_SOURCE_FILE_PATH")"
 # shellcheck disable=SC2016
 USAGE="$CURRENT_SOURCE_FILE_NAME"'
 
-This script generate the top level README.md file for the repository.
+Description of your script goes HERE.
 
 '"
 Usage:
@@ -58,23 +58,10 @@ function main() {
 	done
 	shift $((OPTIND - 1))
 
-	cd ..
-
-	podman run -it --rm \
-		-v "$PWD:/data" \
-		docker.io/blackdesk/pandocx:latest \
-		--template .README.template.md \
-		".README.md" -o "./README.md" -t gfm-yaml_metadata_block \
-		-s \
-		-V toc-title:"Table of Contents" \
-		--shift-heading-level-by=1 \
-		--table-of-contents \
-		--toc-depth=4 \
-		-M include-auto \
-		--from markdown+east_asian_line_breaks \
-		--lua-filter include-files.lua \
-		--lua-filter include-code-files.lua
-
+	export UTILSNIPS_TO_VSCODE_CONFIG=./ultisnips-vscode.json
+	pipx run \
+		--spec git+https://github.com/black-desk/ultisnips-vscode.git@override-config-path \
+		ultisnips2vscode
 }
 
 main "$@"
