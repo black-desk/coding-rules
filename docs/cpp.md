@@ -1,7 +1,7 @@
 # Cpp
 
 - [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-- [The Pitchfork Layout](https://blog.black-desk.cn/pages/pintchfork-layout.html)
+- [The Pitchfork Layout](https://black-desk.github.io/pages/pintchfork-layout.html)
 
 ## Where to install my c/c++ header files
 

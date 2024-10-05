@@ -88,7 +88,7 @@ endsnippet
 - [C++ Core
   Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 - [The Pitchfork
-  Layout](https://blog.black-desk.cn/pages/pintchfork-layout.html)
+  Layout](https://black-desk.github.io/pages/pintchfork-layout.html)
 
 ### Where to install my c/c++ header files
 
@@ -149,7 +149,7 @@ snippet find_cpp_header "" b
 endsnippet
 
 snippet find_cpp_source_and_header "" b
-`find -regex '\./\(src\|include\)/.+\.\(h\|hh\|hpp\|hxx\)\(\.in\)?' -type f -printf '%P\n' | sort`
+`find -regex '\./\(src\|include\)/.+\.\(c\|cc\|cpp\|cxx\|h\|hh\|hpp\|hxx\)\(\.in\)?' -type f -printf '%P\n' | sort`
 endsnippet
 ```
 
